@@ -345,4 +345,3 @@ func (s *Server) duplicateRequest(request jsonRequestType, storageMethod string)
 		s.DuplicateCh <- b
 	}
 }
-Reuse internal_id
