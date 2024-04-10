@@ -10,7 +10,7 @@ jobs:
   build-and-deploy:
     #strategy:
     #  matrix: [dev,dev2,stage,prod]
-    uses: uses: Limpid-LLC/aws-deploy/.github/workflows/deploy-to-eks-shared.yml@main
+    uses: Limpid-LLC/aws-deploy/.github/workflows/deploy-to-eks-shared.yml@main
       #with:
       #config-path: .env.master
       #dir-to-upload: ./nginx/
