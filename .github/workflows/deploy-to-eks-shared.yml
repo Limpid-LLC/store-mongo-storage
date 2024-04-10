@@ -52,6 +52,7 @@ jobs:
 
       - name: Build image
         run: |
+          SVC_CFG_FILE=config.yml
           BRANCH=$(git branch --show-current)
           if [ ! -z "$CONFIG_PATH" ];then
             CONFIG=$CONFIG_PATH
@@ -63,8 +64,8 @@ jobs:
           cat build.info
           source $CONFIG
           go get
-          cp config.yml config-template.yml
-          set -a && . ./$CONFIG && set +a && envsubst < config-template.yml > config.yml
+          cp $SVC_CFG_FILE $SVC_CFG_FILE.tpl
+          set -a && . ./$CONFIG && set +a && envsubst < $SVC_CFG_FILE.tpl > $SVC_CFG_FILE
           docker build --pull --progress plain -t ${{env.IMAGE_NAME}}:$BUILD .
           docker push ${{env.IMAGE_NAME}}:$BUILD
           docker tag ${{env.IMAGE_NAME}}:$BUILD ${{env.IMAGE_NAME}}:$BRANCH
