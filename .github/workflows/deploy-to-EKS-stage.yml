@@ -10,7 +10,7 @@ jobs:
   build-and-deploy:
     #strategy:
     #  matrix: [dev,dev2,stage,prod]
-    uses: ./.github/workflows/deploy-to-eks-shared.yml@main
+    uses: ./.github/workflows/deploy-to-eks-shared.yml
       #with:
       #config-path: .env.master
       #dir-to-upload: ./nginx/
