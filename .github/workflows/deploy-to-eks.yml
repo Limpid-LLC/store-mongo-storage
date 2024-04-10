@@ -1,10 +1,10 @@
-name: Deploy to EKS
+name: Deploy to EKS by call
 # https://docs.github.com/en/actions/using-workflows/reusing-workflows
 # see https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-a-matrix-strategy-with-a-reusable-workflow
 on:
-  push:
-    branches:
-      - stage
+  #push:
+  #  branches:
+  #    - stage
   workflow_dispatch:
 jobs:
   build-and-deploy:

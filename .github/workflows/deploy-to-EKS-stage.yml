@@ -1,4 +1,4 @@
-name: Deploy to STAGE
+name: Deploy to EKS STAGE
 # https://docs.github.com/en/actions/using-workflows/reusing-workflows
 # see https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-a-matrix-strategy-with-a-reusable-workflow
 on:
@@ -10,7 +10,7 @@ jobs:
   build-and-deploy:
     #strategy:
     #  matrix: [dev,dev2,stage,prod]
-    uses: uses: ./.github/workflows/deploy-to-eks-shared.yml
+    uses: ./.github/workflows/deploy-to-eks-shared.yml
       #with:
       #config-path: .env.master
       #dir-to-upload: ./nginx/
