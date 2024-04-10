@@ -6,6 +6,12 @@ on:
   #  branches:
   #    - stage
   workflow_dispatch:
+    inputs:
+      config-path:
+        description: environment file name (i.e. .env.stage_auth)
+      dir-to-upload:
+        description: which dir put into container
+        default: ./
 jobs:
   build-and-deploy:
     #strategy:
