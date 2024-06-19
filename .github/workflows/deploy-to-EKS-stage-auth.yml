@@ -12,7 +12,6 @@ jobs:
     #  matrix: [dev,dev2,stage,prod]
     uses: ./.github/workflows/deploy-to-eks-shared.yml
     with:
-      service-tag: auth
       config-path: .env.stage_auth
       #dir-to-upload: ./nginx/
       #dir-to-upload: ./
